@@ -4,6 +4,7 @@
 
   html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   header{
     width:100%;height:100px;
@@ -66,18 +67,23 @@
   }
   .gnb li:first-child .sub{
     width: 130px;
+    left: -40px;
   }
   .gnb li:nth-child(2) .sub{
     width: 160px;
+    left: -20px;
   }
   .gnb li:nth-child(3) .sub{
     width: 150px;
+    left: -20px;
   }
   .gnb li:nth-child(4) .sub{
     width: 160px;
+    left: -30px;
   }
   .gnb li:nth-child(5) .sub{
     width: 130px;
+    left: -35px;
   }
   .gnb2{
     position: absolute;
@@ -158,94 +164,107 @@
   .on{
     background:#BDD957 !important;
   }
-  .news_con{
-    width: 1200px;
-    display: flex;
-    margin: 60px auto;
+
+  .mconf{
+    width: 100%;
+    height: 800px;
+    position: relative;
+    padding-top: 100px;
   }
-  .news_con article{
-    height: 500px;
-    margin-right: 20px;
+  .mconf img{
+    height: 400px;
+    transition: 0.5s;
   }
-  .youtube> h3{
-    font-size: 34px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  .mconf img:hover{
+    filter: brightness(70%);
   }
-  .news_con article > h3 > span{
+  .oce img:hover + .ot span{
     display: block;
   }
-  .news_con article > h3 > img{
-      width: 280px;
-    }
-  .news_con iframe{
-    width: 85%;
-    height: 315px;
+  .ski img:hover + .st span{
+    display: block;
   }
-  .youtube{
-    width: 60%;
+  .oce{
+    position: absolute;
+    left: 0;
   }
-  .news_list{
-    width: 40%;
+  .ski{
+    position: absolute;
+    right: 0;
+    top: 400px;
   }
-
-  .news_list > h3{
-    font-size: 34px !important; 
-    padding-top: 10px;
-  }
-  .news_list i.fa-circle{
-    color: #BDD957;
-    font-weight: bold;
-    padding-right: 6px;
-    font-size: 16px;
-  }
-  .news_list ul{
-    width: 300px;
-  }
-  .news_list li{
-    text-overflow: ellipsis;
-    overflow: hidden;
+  .ot p{
+    position: absolute;
     white-space: nowrap;
-    line-height: 250%;
+    top: 60px;
+    left: 1030px;
+    transform: rotate(90deg);
+    font-size: 34px;
   }
-  .news_list li > a{
+  .st p{
+    position: absolute;
+    white-space: nowrap;
+    top: 280px;
+    right: 1020px;
+    transform: rotate(90deg);
+    font-size: 34px;
+    z-index: 100000000;
+  }
+  .ot span{
+    position: absolute;
+    top: 160px;
+    color: #fff;
     font-size: 16px;
-    font-weight: bold;
-    color: #777777;
-    display: inline;
+    display: block;
+    width: 600px;
+    left: 20px;
+    display: none;
+    transition: 0.5s;
+    line-height: 30px;
   }
-  .news_list ul > li:hover a{
-    /* text-decoration: none; */
-  }
+ .st span{
+  position: absolute;
+  right: 20px;
+  top: 160px;
+  display: block;
+  width: 600px;
+  font-size: 16px;
+  color: #fff;
+  display: none;
+  transition: 0.5s;
+  line-height: 30px;
+ } 
 
-
+ .ddn{
+  display: none;
+ }
+.ran h2{
+  display: none;
+}
   .tab_con{
-    width: 100%;
-    background-color: #f4f4f4;
-    height: 700px;
-  }
-  .tab_con article{
     width: 1200px;
     margin: 0 auto;
-    padding-top: 100px;
-    position: relative;
+    height: 400px;
+    padding-bottom: 100px;
   }
   .tab_con_wrap{
     display: flex;
-    justify-content: center;
     position: absolute;
-    width: 100%;
+    width: 1200px;
+    margin: 0 auto;
   }
 
   .tab_con_wrap > li{
   }
   .tab_con_wrap > li > a{
-    padding:  15px;
-    display: inline-block;
+    padding:  12px 20px;
+    display: block;
     background-color: #333;
     color: #fff;
     font-size: 17px;
     text-align: center;
+    margin-right: 30px;
+    border-radius: 20px;
   }
   .tab_con_wrap > li:hover a{
     text-decoration: none;
@@ -257,45 +276,60 @@
     font-weight: 400;
   }
   .act{
-    background-color: #f36f21 !important;
+    background-color: #BDD957 !important;
   }
-  .tab_con_wrap > li div{
+  /* .tab_con_wrap > li div{
     width: 50%;
     top: 87px;
     left: 0;
-  }
+  } */
   .tab_con_wrap div > h4{
     font-size: 30px;
     padding-bottom: 40px;
   }
   .tab_con_wrap > li .con01{
-    display: block;
+    /* display: block; */
+    
   }
+  
+    .con01 ul{
+      top: 80px;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content:space-between;
+    }
+    .con01 img ,.con02 img{
+      width: 277.5px;
+      border-radius: 10px;
+      display: block;
+    }
+    .con01 ul > li, .con02 ul > li{
+      margin-right: 30px;
+    }
+    .con01 ul > li:last-child, .con02 ul > li:last-child{
+      margin-right: 0px;
+    }
+    .con01 ul > li div{
+      padding-top: 20px;
+      display: block !important;
+    }
+
+    .con01 p ,.con02 p{
+      line-height: 2em;
+      color: #777777;
+      font-size: 17px;
+    }
+
+
+
+    
   .tab_con_wrap > li .con02{
     display: none;
   }
   .tab_con_wrap > li .con02 p{
     line-height: 2em;
-    font-size: 15px;
     color: #777777;
-  }
-
-  .con01 ul{
-    top: 80px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .con01 ul > li div{
-    display: block !important;
-  }
-  .con01 p{
-    line-height: 2em;
-    font-size: 15px;
-    color: #777777;
-    padding-bottom: 40px;
   }
 
   .con02 ul{
@@ -314,32 +348,40 @@
   }
   .con02 > ul > li{
     width: 25%;
+    overflow: hidden;
   } 
-  .con02 p{
-    line-height: 2em;
-    font-size: 15px;
-    color: #777777;
-    padding-bottom: 40px;
-  }
+
   .tab_con_wrap p{
     font-weight: bold;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .tab_con_wrap span{
-    font-size: 12px;
+    font-size: 18px;
     color: #777777;
-    font-weight: bold;
   }
 
+  #ran{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    height: 400px;
+  }
+  #ran img{
+    width: 100%;
+    height: 100%;
+  }
 
   .best_product{
-    padding: 60px 0px;
     width: 100%;
   }
   .best_product article{
     width: 1200px;
     margin: 0 auto;
   }
-  .best_product article > h3{
+  .best_product article > h3, .mconf > h2, .m_slide > h2{
     font-size: 45px;
     text-align: center;
     font-weight: 400;
@@ -367,16 +409,13 @@
     font-size: 15px;
     line-height: 25px;
     color: #805a28;
-    
   }
 
 
   /* 이벤트 콘텐츠 */
   .event{
     width: 1200px;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin: 0 auto;
+    margin: 100px auto;
     position: relative;
   }
   .event > h2{
@@ -416,7 +455,7 @@
     border-radius: 50%;
     background-color: #fff;
     border: 1px solid #333;
-    top: 330px;
+    top: 250px;
     cursor: pointer;
     transition: 0.5s;
   }
@@ -430,123 +469,52 @@
     right: -65px;
   }
   .e_text{
-    padding: 20px 0px 0px 30px;
+    padding: 0px 0px 0px 30px;
     line-height: 40px;
   }
-  .e_text > span{
-    background-color: #e1e1e1;
-    padding: 5px 8px;
-    font-size: 15px;
-  }
+
   .e_text h3{
-    font-size: 18px;
+    font-size: 24px;
   }
   .e_text p{
     font-size: 15px;
   }
 
-  /* 갤러리 */
-  .gallery{
-    width: 100%;
-    height: 1040px;
-  }
-  .gallery > article{
-    padding-top: 80px;
+
+  .visual_slide {
     width: 1200px;
     margin: 0 auto;
-  }
-  .gallery h2{
-    font-size: 45px;
-    padding-bottom: 40px;
-    text-align: center;
-    font-weight: 400;
-  }
-  .girl {
-    margin: 0 auto;
-    display: grid;
-    grid-template-rows: 262.5px 262.5px 262.5px;
-    padding: 20px;
-    grid-gap: 20px;
-    grid-template-areas:
-      "g01 g04 g03"
-      "g02 g04 g05"
-      "g06 g07 g08";
-  }
-
-  figure {
     overflow: hidden;
   }
-
-  figure:hover figcaption {
-    transform: translate(0px, -80px);
+  
+  .swiper-wrapper {
+    display: flex;
+    /* width: 5520px;
+    overflow: hidden; */
   }
-
-  .girl figcaption {
-    height: 80px;
-    background-color: #111111;
+  
+  .swiper-slide {
     position: relative;
+  }
+
+  
+  .swiper-slide img {
     transition: 0.5s;
+    display: block;
   }
-
-  figcaption h6 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #f36f21;
-    padding: 10px 0px 5px 20px;
+  
+  .swiper-slide img:hover {
+    filter: brightness(80%);
   }
-
-  figcaption p {
-    font-size: 10px;
-    color: #ffffff;
-    padding: 5px 0px 0px 20px;
-  }
-
-  figcaption span {
-    border: 1px solid #ffffff;
-    font-size: 12px;
-    color: #ffffff;
-    padding: 5px;
+  
+  .swiper-slide p {
     position: absolute;
-    right: 20px;
-    bottom: 15px;
+    bottom: 30px;
+    left: 20px;
+    color: #fff;
   }
 
-  .girl img {
-    width: 100%;
-    height: 100%;
-  }
 
-  .girl figure:first-child {
-    grid-area: g01;
-  }
-
-  .girl figure:nth-child(2) {
-    grid-area: g04;
-  }
-
-  .girl figure:nth-child(3) {
-    grid-area: g03;
-  }
-
-  .girl figure:nth-child(4) {
-    grid-area: g02;
-  }
-
-  .girl figure:nth-child(5) {
-    grid-area: g05;
-  }
-
-  .girl figure:nth-child(6) {
-    grid-area: g06;
-  }
-
-  .girl figure:nth-child(7) {
-    grid-area: g07;
-  }
-
-  .girl figure:last-child {
-    grid-area: g08;
-  }
 
   .modal{
     position: fixed;
@@ -604,7 +572,7 @@
   /* 푸터서식 */
   footer{
     width: 100%;
-    background-color: #202020;
+    background-color: #545454;
     color: #fff;
   }
   .f_inner{
@@ -621,9 +589,9 @@
     line-height: 30px;
   }
   footer dl dt a{
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
-    color: #f36f21;
+    color: #BDD957;
     transition: 0.5s;
   }
   footer dl dd a{
@@ -632,11 +600,10 @@
     transition: 0.5s;
   }
   footer dl dt:hover a{
-    color: #23527c;
     text-decoration: none;
   }
   footer dl dd:hover a{
-    color: #f36f21;
+    color: #BDD957;
     text-decoration: none;
   }
   .sns dt{
@@ -667,9 +634,9 @@
     justify-content:space-between;
     height: 70px;
   }
-  address h2{
-    width: 130px;
-    padding: 23px 0px 0px 10%;
+  address a{
+    width: 100px;
+    padding: 15px 0px 0px 10%;
   }
   address img{
     width: 100%;
@@ -687,3 +654,38 @@
     transition: 0.5s;
   }
 
+  .p_modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0 ,.7);
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+  }
+  .p_modal div{
+    max-width: 640px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .banner img{
+    width: 500px;
+  }
+  #ch, label{
+    float: left;
+  }
+  #ch{
+    transform: scale(1.2);
+    margin: 0;
+  }
+  label{
+    color: #fff;
+    font-size: 16px;
+    margin-left: 8px;
+  }
+  #c_btn{
+    float: right;
+  }

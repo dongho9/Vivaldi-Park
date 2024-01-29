@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>미에로화이버 반응형웹</title>
+  <title>비발디파크</title>
   <!-- 초기화 -->
   <link href="./css/reset.css" rel="stylesheet" type="text/css">
   <!-- 공통서식 (글꼴, 크기, 색상, 링크)-->
@@ -11,7 +11,7 @@
   <!-- pc화면 해상도일때 적용되는 서식 -->
   <link href="./css/pc.css" rel="stylesheet" type="text/css">
   <!-- tablet화면 해상도일때 적용되는 서식 -->
-  <!-- <link href="./css/tablet.css" rel="stylesheet" type="text/css"> -->
+  <link href="./css/tablet.css" rel="stylesheet" type="text/css">
   <!-- mobile화면 해상도일때 적용되는 서식 -->
   <link href="./css/mobile.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="./script/gallery.js"></script>
+  <script src="./script/jquery.cookie.js"></script>
+  <script src="./script/main.js"></script>
+  <script src="./script/swiper.js"></script>
 </head>
 <body>
   
@@ -41,10 +44,9 @@
     <!-- 메인메뉴 -->
     <nav class="gnb">
       <ul>
-
         <li>
           <a href="#" title="미에로">
-            ROOM</i>
+            ROOM
           </a>
           <ul class="sub">
             <li>
@@ -90,7 +92,7 @@
         </li>
 
         <li>
-          <a href="#" title="미에로스토리">FOODWORLD</i></a>
+          <a href="#" title="미에로스토리">FOODWORLD</a>
           <ul class="sub">
             <li>
               <a href="#" title="티광">푸드월드 전체안내도</a>
@@ -102,7 +104,7 @@
         </li>
 
         <li>
-          <a href="#" title="미에로이벤트">SKI & BOARD</i></a>
+          <a href="#" title="미에로이벤트">SKI & BOARD</a>
           <ul class="sub">
             <li>
               <a href="#" title="진이">스키&보드 전체안내도</a>
@@ -192,71 +194,31 @@
     </article>
 
     <!-- 뉴스 -->
-    <section class="news_con">
-      <h2></h2>
-      <article class="youtube">
-        <h3>
-          <span>비발디파크</span>
-        </h3>
-        <iframe src="https://www.youtube.com/embed/yvXdBSER73U?si=Fjl2wxWBmLtrrvSA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </article>
-  
-      <article class="news_list">
-        <h3>
-          <span>비발디파크 News</span>
-        </h3>
-        <ul>
-          <li>
-            <i class="far fa-circle"></i>
-              <a href="#" title="">
-                스키장 모글코스 재조성 안내
-              </a>
-          </li>
-          <li>
-            <i class="far fa-circle"></i>
-              <a href="#" title="">
-                제9회 카브·다이나스타·비발디파크 스키챔피언쉽 개최 안내	
-              </a>
-          </li>
-          <li>
-            <i class="far fa-circle"></i>
-              <a href="#" title="">
-                23/24 비발디파크 스키 브랜드 시승회 안내
-              </a>
-          </li>
-          <li>
-            <i class="far fa-circle"></i>
-              <a href="#" title="">
-                개인정보 처리방침 변경 안내
-              </a>
-          </li>
-          <li>
-            <i class="far fa-circle"></i>
-              <a href="#" title="">
-                [소노펫 비발디파크] 반려견 체급 분류 및 입실 기준 변경 안내
-              </a>
-          </li>
-          <li>
-            <i class="far fa-circle"></i>
-              <a href="#" title="">
-                [소노펫 비발디파크] 컬처그라운드 운영시간 변경 안내
-              </a>
-          </li>
-          <li>
-            <i class="far fa-circle"></i>
-              <a href="#" title="">
-                비발디파크 관광곤돌라 운영 안내
-              </a>
-          </li>
-        </ul>
-      </article>
+    <section class="mconf">
+      <h2>Signature</h2>
+      <div class="box-wrap">
+      <div class="oce">
+          <img src="images/m_con01.png" alt="오션월드">
+        <div class="ot">
+          <p>Ocean World</p>
+          <span>강원 지역의 능선이 굽이치는 청정 수풀림 속 다양한 물놀이 시설로 그 재미를 만끽할 수 있는 '오션월드'는 여러분들에게 건강한 즐거움 'Healthy Entertainment'을 선사하는 비발디파크의 워터파크 입니다.</span>
+        </div>
+      </div>
+      <div class="ski">
+          <img src="images/m_con02.png" alt="스키">
+        <div class="st">
+          <p>Ski & SnowyLand</p>
+          <span>
+            가깝고 편리한 수도권 최대 규모의 스키장으로 쾌적한 시설과 최고의 서비스의 스키장과 온 가족이 다 함께 즐길 수 있는 비발디파크만의 특별한 스노우 테마파크로 초대합니다.
+          </span>
+        </div>
+      </div>     
+     </div>
     </section>
     
     <!-- 탭콘텐츠 -->
     <section class="tab_con">
-      <h2></h2>
-      <article>
-        <h3>PACKAGE & EVENT</h3>
+        <h3>Package & Event</h3>
         <ul class="tab_con_wrap">
           <li>
             <a href="#" title="식" class="act">
@@ -265,8 +227,8 @@
             <div class="con01">
               <ul>
                 <li>
-                  <a href="#" title="">
-                    <img src="images/mcon03.jpg" alt="">
+                  <a href="#" title="패키지1">
+                    <img src="images/mcon03.jpg" alt="패키지1">
                     <div>
                       <p>23/24 리프트&렌탈권 예약</p>
                       <span>2024.01.24 ~ 2024.03.03</span>
@@ -274,8 +236,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" title="">
-                    <img src="images/mcon04.jpg" alt="">
+                  <a href="#" title="패키지2">
+                    <img src="images/mcon04.jpg" alt="패키지2">
                     <div>
                       <p>오션월드 멀티권 온라인 예약</p>
                       <span>2023.12.15 ~ 2024.03.03</span>
@@ -283,8 +245,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" title="">
-                    <img src="images/mcon05.jpg" alt="">
+                  <a href="#" title="패키지3">
+                    <img src="images/mcon05.jpg" alt="패키지3">
                     <div>
                       <p>오션월드 온라인 예약</p>
                       <span>2024.01.24 ~ 2024.03.03</span>
@@ -292,8 +254,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" title="">
-                    <img src="images/mcon03.jpg" alt="">
+                  <a href="#" title="패키지4">
+                    <img src="images/mcon03.jpg" alt="패키지4">
                     <div>
                       <p>Winter Journey 패키지</p>
                       <span>2023.12.15 ~ 2024.02.28</span>
@@ -310,8 +272,8 @@
             <div class="con02">
               <ul>
                 <li>
-                  <a href="#" title="">
-                    <img src="images/mcon07.jpg" alt="">
+                  <a href="#" title="이벤트1">
+                    <img src="images/mcon07.jpg" alt="이벤트1">
                     <div>
                       <p>	[23/24 동계시즌 특별할인] 올 겨울, 당신의 "할인" 취향은?</p>
                       <span>2024.01.18~2024.03.03</span>
@@ -319,8 +281,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" title="">
-                    <img src="images/mcon08.jpg" alt="">
+                  <a href="#" title="이벤트2">
+                    <img src="images/mcon08.jpg" alt="이벤트2">
                     <div>
                       <p>2월 하나카드 1+1 프로모션</p>
                       <span>2024.02.01 ~ 2024.02.29
@@ -329,8 +291,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" title="">
-                    <img src="images/mcon09.jpg" alt="">
+                  <a href="#" title="이벤트3">
+                    <img src="images/mcon09.jpg" alt="이벤트3">
                     <div>
                       <p>삼악산케이블카X비발디파크</p>
                       <span>2024.01.11 ~ 2024.02.29</span>
@@ -338,8 +300,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" title="">
-                    <img src="images/mcon10.jpg" alt="">
+                  <a href="#" title="이벤트4">
+                    <img src="images/mcon10.jpg" alt="이벤트4">
                     <div>
                       <p>1월은 카카오페이와 함께 1+1 프로모션</p>
                       <span>2024.01.01 ~ 2024.01.31</span>
@@ -350,47 +312,45 @@
             </div>
           </li>
         </ul>
-      </article>
     </section>
 
+   
     <!-- 인기제품 -->
-    <section class="best_product">
-      <h2></h2>
-        <article>
-          <h3>Healing & Convenience</h3>
-        <!-- ul>li*4>img+h3+p 꿀팁 -->
-        <ul>
-          <li>
-            <img src="images/mcon11.jpg" alt="상품1">
-            <h4>Infinity Pool</h4>
-            <p>푸른잔디와 운해가 펼쳐지는 동화같은 인피니티풀
-              깨끗한 물과 자연풍광을 바라보며
-              진정한 휴식을 느껴보세요.</p>
-          </li>
-          <li>
-            <img src="images/mcon12.jpg" alt="상품2">
-            <h4>K1 SPEED</h4>
-            <p>실내 전기카트 레이싱의 스릴과
-              흥분을 체험한 적이 없다면
-              K1 SPEED 비발디파크에 방문하십시오.</p>
-          </li>
-          <li>
-            <img src="images/mcon13.jpg" alt="상품3">
-            <h4>AntWorld</h4>
-            <p>대형 놀이시설과 흥미를 더해 줄 다양한 캐릭터와
-              신나게 놀며,특별한 추억을 온 가족이 함께
-              만들 수 있는 앤트월드로 오세요.</p>
-          </li>
-          <li>
-            <img src="images/mcon14.jpg" alt="상품4">
-            <h4>Good & Goods</h4>
-            <p>고객님들이 필요로 하는 물품들로 채워진
-              마트에서 편안한 분위기로 고객님의
-              여유로운 쇼핑을 도와드립니다.</p>
-          </li>
-        </ul>        
-      </article>    
-    </section>
+    <article class="m_slide">
+      <h2>Healing & Convenience
+      </h2>
+      <div class="visual_slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/mcon11.png" alt="인피니티풀">
+            <p>Infinity Pool</p>
+            <p></p>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/mcon12.png" alt="스피드">
+            <p>K1 SPEED</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/mcon13.png" alt="개미">
+            <p>AntWorld
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/mcon14.png" alt="슈퍼">
+            <p>Good & Goods</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/mcon15.png" alt="볼링">
+            <p>Bowling</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/mcon16.png" alt="게임">
+            <p>Legend Heroes</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </article>
 
     <!-- 이벤트 1170*256 746*256 -->
     <section class="event">
@@ -401,7 +361,6 @@
             <a href="#" title="이벤트">
               <img src="images/event01.png" alt="이벤트1">
               <div class="e_text">
-                <span>종료</span>
                 <h3>Suite Room</h3>
                 <p>골프,스키월드,오션월드 등 다양한 레포츠 시설과 부대시설을 갖춘 4계절 레저 복합시설(Multi Leisure-Complex) 비발디파크, 그 중심에 있는 소노벨 비발디파크에서 다양한 레저 시설을 즐기실 수 있습니다.</p>
               </div>
@@ -411,7 +370,6 @@
             <a href="#" title="이벤트">
               <img src="images/event02.png" alt="이벤트2">
               <div class="e_text">
-                <span>종료</span>
                 <h3>Family Room</h3>
                 <p>골프,스키월드,오션월드 등 다양한 레포츠 시설과 부대시설을 갖춘 4계절 레저 복합시설(Multi Leisure-Complex) 비발디파크, 그 중심에 있는 소노벨 비발디파크에서 다양한 레저 시설을 즐기실 수 있습니다.</p>
               </div>
@@ -421,7 +379,6 @@
             <a href="#" title="이벤트">
               <img src="images/event03.png" alt="이벤트3">
               <div class="e_text">
-                <span>종료</span>
                 <h3>Gold Suite Room</h3>
                 <p>골프,스키월드,오션월드 등 다양한 레포츠 시설과 부대시설을 갖춘 4계절 레저 복합시설(Multi Leisure-Complex) 비발디파크, 그 중심에 있는 소노벨 비발디파크에서 다양한 레저 시설을 즐기실 수 있습니다.</p>
               </div>
@@ -432,115 +389,10 @@
       <i class="fas fa-angle-left"></i>
       <i class="fas fa-angle-right"></i>
     </section>
-
-    <section class="gallery">
-      <article>
-        <h2>Vivaldi Park Story</h2>
-        <div class="girl">
-          <figure>
-            <a href="images/mcon5_1.jpg" title="">
-              <img src="images/mcon5_1.jpg" alt="">
-            </a>
-            <figcaption>
-              <a href="http://hy87kang.dothome.co.kr/miero/miero.html#" title="">
-                <h6>TV광고</h6>
-                <p>2020</p>
-                <span>영상보기</span>
-              </a>
-            </figcaption>
-          </figure>
-          <figure>
-                  <a href="images/mcon5_2.jpg" title="">
-                    <img src="images/mcon5_2.jpg" alt="">
-                  </a>
-                  <figcaption>
-                    <a href="http://hy87kang.dothome.co.kr/miero/miero.html#" title="">
-                      <h6>인쇄광고</h6>
-                      <p>2020</p>
-                    </a>
-                  </figcaption>
-          </figure>
-          
-          <figure>
-            <a href="images/mcon5_3.jpg" title="">
-              <img src="images/mcon5_3.jpg" alt="">
-            </a>
-            <figcaption>
-              <a href="http://hy87kang.dothome.co.kr/miero/miero.html#" title="">
-                <h6>TV광고</h6>
-                <p>2019</p>
-                <span>영상보기</span>
-              </a>
-            </figcaption>
-          </figure>
-    
-          
-          <figure>
-            <a href="images/mcon5_4.png" title="">
-              <img src="images/mcon5_4.png" alt="">
-            </a>
-            <figcaption>
-              <a href="http://hy87kang.dothome.co.kr/miero/miero.html#" title="">
-                <h6>인쇄광고</h6>
-                <p>2019</p>
-              </a>
-            </figcaption>
-          </figure>
-    
-          <figure>
-            <a href="images/mcon5_5.jpg" title="">
-              <img src="images/mcon5_5.jpg" alt="">
-            </a>
-            <figcaption>
-              <a href="http://hy87kang.dothome.co.kr/miero/miero.html#" title="">
-                <h6>인쇄광고</h6>
-                <p>2018</p>
-              </a>
-            </figcaption>
-          </figure>
-    
-          <figure>
-            <a href="images/mcon5_6.jpg" title="">
-              <img src="images/mcon5_6.jpg" alt="">
-            </a>
-            <figcaption>
-              <a href="http://hy87kang.dothome.co.kr/miero/miero.html#" title="">
-                <h6>TV광고</h6>
-                <p>2018</p>
-                <span>영상보기</span>
-              </a>
-            </figcaption>
-          </figure>
-    
-          <figure>
-            <a href="images/mcon5_7.jpg" title="">
-              <img src="images/mcon5_7.jpg" alt="">
-            </a>
-            <figcaption>
-              <a href="http://hy87kang.dothome.co.kr/miero/miero.html#" title="">
-                <h6>프로모션</h6>
-                <p>2020</p>
-                <span>영상보기</span>
-              </a>
-            </figcaption>
-          </figure>
-    
-          <figure>
-            <a href="images/mcon5_8.jpg" title="">
-              <img src="images/mcon5_8.jpg" alt="">
-            </a>
-            <figcaption>
-              <a href="http://hy87kang.dothome.co.kr/miero/miero.html#" title="">
-                <h6>프로모션</h6>
-                <p>2017</p>
-                <span>영상보기</span>
-              </a>
-            </figcaption>
-          </figure>
-    
-        </div>
-      </article>
+ <section id="ran">
+      <h2>배너</h2>
     </section>
+
   </main>
 
   <!-- 푸터영역 시작 -->
@@ -554,99 +406,152 @@
         <dl>
             <dt>
                <a href="#" title="미에로">
-                미에로
+                ROOM
                </a>
             </dt>
             <dd>
               <a href="#" title="브스">
-                브랜드 스토리
+                객실전체안내도
               </a>
             </dd>
             <dd>
               <a href="#" title="식스">
-                식이섬유 스토리
+                객실이용안내
+              </a>
+            </dd>
+            <dd>
+              <a href="#" title="식스">
+                리조트
+              </a>
+            </dd>
+            <dd>
+              <a href="#" title="식스">
+                호텔
+              </a>
+            </dd>
+            <dd>
+              <a href="#" title="식스">
+                소노펫객실
+              </a>
+            </dd>
+            <dd>
+              <a href="#" title="식스">
+                오션월드빌리지
               </a>
             </dd>
         </dl>
         <dl>
           <dt>
-            <a href="#" title="">
-              제품소개
+            <a href="#" title="오션월드">
+              OCEANWORLD
             </a>
           </dt>
           <dd>
-            <a href="#" title="">
-              미에로화이바
+            <a href="#" title="전체안내도">
+              오션월드 전체안내도
             </a>
           </dd>
           <dd>
-            <a href="#" title="">
-              헬씨올리고
+            <a href="#" title="안내">
+              오션월드 안내
             </a>
           </dd>
           <dd>
-            <a href="#" title="">
-              헬씨올리고 프로바이오틱스
+            <a href="#" title="안내2">
+              오션월드 이용안내
+            </a>
+          </dd>
+          <dd>
+            <a href="#" title="안내3">
+              오션월드 요금안내
+            </a>
+          </dd>
+          <dd>
+            <a href="#" title="시설">
+              오션월드 부대시설
             </a>
           </dd>
         </dl>
         <dl>
           <dt>
-            <a href="#" title="">
-              미에로 스토리
+            <a href="#" title="푸드월드">
+              FOODWORLD
             </a>
           </dt>
           <dd>
-            <a href="#" title="">
-              TV광고
+            <a href="#" title="안내도">
+              푸드월드 전체안내도
             </a>
           </dd>
           <dd>
-            <a href="#" title="">
-              인쇄광고
-            </a>
-          </dd>
-          <dd>
-            <a href="#" title="">
-              프로모션
+            <a href="#" title="소개">
+              대표메뉴소개
             </a>
           </dd>
         </dl>
         <dl>
           <dt>
-            <a href="#" title="">
-              미에로 이벤트
+            <a href="#" title="스키보드">
+              SKI & BOARD
             </a>
           </dt>
           <dd>
-            <a href="#" title="">
-              진행중인 이벤트
+            <a href="#" title="안내도">
+              스키&보드 전체안내도
             </a>
           </dd>
           <dd>
-            <a href="#" title="">
-              당첨자 발표
+            <a href="#" title="안내">
+              스키&보드 안내
+            </a>
+          </dd>
+          <dd>
+            <a href="#" title="안내2">
+              스키&보드 요금안내
+            </a>
+          </dd>
+          <dd>
+            <a href="#" title="안내3">
+              스키학교 안내
+            </a>
+          </dd>
+          <dd>
+            <a href="#" title="스노위랜드">
+              스노위랜드
             </a>
           </dd>
         </dl>
         <dl>
           <dt>
-            <a href="#" title="">
-              공지사항
+            <a href="#" title="이벤트">
+              EVENT
             </a>
           </dt>
           <dd>
-            <a href="#" title="">
-              News&Notice
+            <a href="#" title="프로모션이벤트">
+              프로모션 & 이벤트
+            </a>
+          </dd>
+          <dd>
+            <a href="#" title="안내">
+              할인안내
+            </a>
+          </dd>
+          <dd>
+            <a href="#" title="예약">
+              온라인 예약
             </a>
           </dd>
         </dl>
         <dl>
           <dt>
-            <a href="#" title="">
+            <a href="#" title="약품">
               현대약품
             </a>
           </dt>
+          <dd class="ddn">
+            none
+          </dd>
         </dl>
 
         <dl class="sns">
@@ -661,232 +566,37 @@
     </div>
 
     <address>
-      <h2>
         <a href="index.html" title="메인페이지 바로가기">
-          <img src="images/logo3.png" alt="하단로고">
+          <img src="images/main_logo.jpg" alt="하단로고">
         </a>
-      </h2>
       <p>copyright&copy; 2024 MIERO FIBER. All Rights Reserved.</p>
     </address>
   </footer>
 
   <!-- 제이쿼리 라이브러리 -->
  
-  <script>
-    $(document).ready(function(){
-
-      // 1. 변수선언
-      let gnb = $('header .gnb > ul > li > a');
-      const l_btn = $('.visual .s_btn li:first-child');//좌측버튼
-      const r_btn = $('.visual .s_btn li:last-child');//우측버튼
-      const c_btn = $('.visual .ctrl_btn li'); //콘트롤 버튼
-      let v_slide_img = $('.visual > div');//슬라이드 이미지
-
-      const e_left = $('.event i.fa-angle-left'); //이벤트 좌버튼
-      const e_right = $('.event i.fa-angle-right'); //이벤트 우버튼
-
-      // const t = $(this).parent().index();
-      // console.log(t);
-      // if(t==2){
-      //   $('.tab_con article').height(800);
-      // }else{
-      //   $('.tab_Con article').height(500);
-      // }
-
-      let i = $('.visual .ctrl_btn li').index(); //0값
-
-      gnb.mouseenter(function(){
-        // $('.sub').hide(); //보이는 서브 숨기고
-        // // $(this).next().show(); //자신의 다음 요소 보이게하기
-        $(this).next().toggle().parent().siblings().find('.sub').hide(); //자신의 다음 요소에 토글효과를 적용하고 자신의 부모의 형제들 중 .sub를 찾아서 숨기게한다
-      })
-      $('.gnb').mouseleave(function(){
-        $('.sub').css('display', 'none');
-      })
-      
-
-      $('#toggle').click(function(){
-        $('#toggle span:nth-child(2)').toggleClass('hide01');
-        $('#toggle span:first-child').toggleClass('rotate1');
-        $('#toggle span:last-child').toggleClass('rotate2');
-        $(this).toggleClass('bb');
-        $(this).toggleClass('tc');
-        $('.gnb').slideToggle();
-        $('.sub').slideUp();
-      })
-
-      //2. 움직이는 함수 = 서서히 사라지고 나타나는 효과
-      function fadeInOut(){
-        //console.log('시간함수호출');
-        v_slide_img.stop().fadeOut(); //보이는 이미지 숨기고
-        $('.visual .ctrl_btn li').removeClass('on'); //콘트롤버튼 서식 모두 제거
-
-        if(i==2){  //만약에 마지막 이미지라면
-          i=0; //처음이미지가 보이게하고
-        }else{ //그렇지 않으면
-          i++; //다음 이미지가 보이도록 한다.
-        }
-        $('.visual .ctrl_btn li').eq(i).addClass('on'); //선택한 콘트롤 버튼에 서식적용
-        v_slide_img.eq(i).stop().fadeIn(); //해당 이미지가 보이게 한다.
+  <script>  
+    // 스와이퍼 슬라이드 스크립트
+    let visual_slide = new Swiper('.visual_slide', {
+      //옵션선택
+      slidesPerView: 1, 
+      spaceBetween: 20,
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,  //브라우저가 768보다 클 때
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,  //브라우저가 1024보다 클 때
+          spaceBetween: 400,
+        },
       }
+    });
+    </script>
 
-      function fadeInOut2(){
-        v_slide_img.stop().fadeOut();
-        $('.visual .ctrl_btn li').removeClass('on'); //콘트롤버튼 서식 모두 제거
-        if(i==0){
-          i=2;
-        }else{
-          i--;
-        }
-        $('.visual .ctrl_btn li').eq(i).addClass('on'); //선택한 콘트롤 버튼에 서식적용
-        v_slide_img.eq(i).stop().fadeIn();
-      }
-
-      //3. 매 5초마다 함수를 반복호출하여 슬라이드가 변하게한다.
-      let Timer = setInterval(fadeInOut,5000);
-
-      //좌, 우 버튼 클릭시 해당하는 방향으로 슬라이드 이미지가 나오게하기
-      l_btn.click(function(){
-        fadeInOut2();
-      });
-      r_btn.click(function(){
-        fadeInOut();
-      });
-
-      //좌, 우버튼에 마우스 오버시 시간을 제거하고
-      $('.s_btn > li').hover(function(){
-        clearInterval(Timer);
-      },function(){//다시 마우스 아웃시 시간을 생성하여 다시 움직이게 한다.
-        Timer = setInterval(fadeInOut, 5000);
-      });
-
-      //pagenation(콘트롤 버튼)
-      //1. 현재이미지 번호를 체크
-      //2. 이미지 전체 개수
-
-      /*
-        구현순서
-        1. 콘트롤 버튼 변수 선언
-        2. 콘트롤 버튼(li) 클릭시 인덱스값 0,1,2값을 출력
-        3. 인덱스값을 fadeInOut함수의 매개변수값으로 넘김 => 슬라이드가 변함
-        4. 사용자가 클릭한 콘트롤버튼(li)에 act서식을 적용하여 어둡게함.
-      */
-
-      c_btn.click(function(){
-        clearInterval(Timer); //기존 자동슬라이드 제거
-
-        let idx = $(this).index();
-
-        v_slide_img.stop().fadeOut(); //보이는 이미지 숨기고
-        $('.visual .ctrl_btn li').removeClass('on'); //콘트롤버튼 서식 모두 제거
-
-        $('.visual .ctrl_btn li').eq(idx).addClass('on'); //선택한 콘트롤 버튼에 서식적용
-        v_slide_img.eq(idx).stop().fadeIn(); //해당 이미지가 보이게 한다.
-
-        i = idx; //원래 i값에 idx값을 일치시켜서 다음 순서가 제대로 나오게
-      });
-      //콘트롤버튼에 마우스 오버시 시간을 제거(Timer)하여 슬라이드 멈추게
-      $('.ctrl_btn').hover(function(){
-        clearInterval(Timer);
-      },function(){//다시 마우스 아웃시 시간을 생성하여 다시 움직이게 한다.
-        Timer = setInterval(fadeInOut, 5000);
-      });
-      //콘트롤버튼에 마우스 아웃시 다시 시간을 넣어서 다시 슬라이드 움직이게
-
-
-      //윈도우창의 너비값 = $(window).width(); or $(window).height();
-      //$(window).innerWidth();
-
-      let width;
-      
-      // //브라우저의 크기가 변하면 함수내용을 실행한다.
-      // $(window).resize(function(){
-      //   w_width = $(window).innerWidth();
-      //   console.log(w_width);
-
-      //   //pc버전 해상도일 경우 배경색 노랑
-      //   if(w_width >= 1025){
-      //     $('header h1 img').attr('src', './images/logo2.png')
-      //     // $('body').css('background', '#ff0');
-      //     //tablet버전 해상도일 경우 초록색
-      //   }else if(w_width > 767 && w_width <=1024){  
-      //     $('header h1 img').attr('src', './images/logo.png')
-      //     $('body').css('background', '#0f0');
-      //     //mobile버전 해상도일 경우 회색
-      //   }else{
-      //     $('header h1 img').attr('src', './images/logo.png')
-      //     $('body').css('background', '#ccc');
-      //   }
-      // }).resize();
-      
-      const eslide = $('.es_wrap');
-      $('.es_wrap > div:last-child').insertBefore('.es_wrap > div:first-child'); //마지막녀석을 첫번째의 앞으로 보내기
-      eslide.css('margin-left', '-100%'); 
-      
-      // moveleft함수
-      function moveLeft(){
-        eslide.stop().animate({'margin-left' : '-200%'},1000, function(){ 
-          $('.es_wrap > div:first-child').insertAfter('.es_wrap > div:last-child');
-          eslide.css('margin-left', '-100%');
-        });
-      }
-
-      let Timer2 = setInterval(moveLeft, 3000);
-
-      function moveRight(){
-        eslide.stop().animate({'margin-left' : '0px'},1000, function(){ 
-          $('.es_wrap > div:first-child').insertBefore('.es_wrap > div:last-child');
-          eslide.css('margin-left', '-100%');
-        });
-      }
-
-      e_left.click(function(){
-        clearInterval(Timer2);
-        moveLeft();
-      })
-      e_right.click(function(){
-        clearInterval(Timer2);
-        moveRight();
-      })
-      $('.event i.fas').mouseenter(function(){
-        clearInterval(Timer2);
-      })
-      $('.event i.fas').mouseleave(function(){
-        Timer2 = setInterval(moveLeft, 3000);
-      })
-
-      $('.tab_con_wrap > li > a').click(function(){
-        $(this).next().show().parent().siblings().find('div').hide();
-        $(this).addClass('act').parent().siblings().find('a').removeClass('act');
-        return false;
-      })
-      $('.tab_con_wrap > li:last-child > a').click(function(){
-        $('.tab_con').addClass('act2');
-      })
-      $('.tab_con_wrap > li:first-child > a').click(function(){
-        $('.tab_con').removeClass('act2');
-      })
-      $('.tab_con_wrap > li:nth-child(2) > a').click(function(){
-        $('.tab_con').removeClass('act2');
-      })
-
-
-            $(window).scroll(function(){
-                let scrollTop2 = $(this).scrollTop();
-                console.log(scrollTop2);
-
-                if(scrollTop2>=800){
-                    $('.t_btn').fadeIn();
-                }else{
-                    $('.t_btn').fadeOut();
-                }
-            });
-
-        $('.t_btn').click(function(){
-          $('html, body').animate({'scrollTop' : '0px'}, 50);
-          return false;
-        })
-          });
-  </script>
 </body>
 </html>

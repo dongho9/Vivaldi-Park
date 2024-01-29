@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+@media screen and (min-width : 768px) and (max-width : 1024px){
+    header{
+        width: 100%;
+        position: absolute;
+        z-index: 1000;
+        background-color: #fff;
+        height: 80px;
+    }
+    header h1{
+        position: absolute;
+        top: 10px;
+        width: 140px;
+    }
+    header > h1 > a > img{
+        width: 100%;
+    }
+    /* 모바일 내비게이션 서식 */
+    header nav{
+        position: fixed;
+        top: 100px;
+        width: 100%;
+        height: 100%;
+        z-index: 1001;
+    }
+    .gnb{
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        left: 5%;
+        top: 80px;
+    }
+    .gnb2{
+        top: -10px;
+        left: 65%;
+    }
+    .gnb > ul{
+        width: 90%;
+        display: block;
+    }
+    .gnb > li{
+        text-align: center;
+        position: relative;
+    }
+    .gnb li a{
+        display: block;
+        background-color: #fff;
+        line-height: 280%;
+        font-size: 18px !important  ;
+        text-align: center;
+        text-decoration: none;
+        color: #333 !important;
+    }
+    .sub{
+        position: absolute;
+        border: 1px solid #ccc;
+        display: none;
+        z-index: 100000;
+        width: 100% !important;
+        box-shadow: none !important;
+        padding: 0;
+        left: 0 !important;
+        top: 50px;
+    }
+    .sub li > a{
+    font-size: 11.9px !important;
+    }
+
+    #toggle{
+        display: flex;
+        border: 1px solid #fff;
+        background-color: rgba(108, 108, 108, 0.5);
+        padding: 8px;
+        top: 14px;
+        position: absolute;
+        right: 3%;
+        width: 32px;
+        height: 32px;
+        transition: 0.5s;
+        z-index: 1002;
+    }
+
+    .bb{
+        border: 1px solid #ff8900 !important; 
+    }
+    #toggle span{
+        background-color: #fff;
+        display: inline-block;
+        width: 33px;
+        height: 2px;
+        position: absolute;
+    }
+    #toggle span:first-child{
+        top: 12px;
+    }
+    #toggle span:nth-child(2){
+        top: 23px;
+    }
+    #toggle span:last-child{
+        bottom: 12px;
+    }
+    .hide01{
+        opacity: 0;
+    }
+    .rotate1{
+        transform: rotate(45deg);
+        left: 8px;
+        top: 23px !important;
+    }
+    .rotate2{
+        transform: rotate(-45deg);
+        bottom: 23px !important;
+        right: 8px;
+    }
+    .tc{
+        background-color: #ff8900 !important;
+    }
+
+    /* 메인서식 */
+    .visual{
+        height: 450px;
+        margin-bottom: 60px;
+    }
+    .visual > div{
+        width: 100% !important;
+        left: 0;
+    }
+    .visual > div > img{
+        width: 100%;
+        height:450px;
+        border-radius: 0px;
+    }
+    .visual .ctrl_btn{
+        top: 30%;
+    }
+    .visual .s_btn{
+        top: 45%;
+    }
+    .visual > div > span{
+        top: 180px;
+    }
+    .tab_con article, .news_con, .best_product article, .event, .e_slide, .es_wrap > div, .gallery > article, .f_inner nav, .girl{
+        width: 100% !important;
+    }
+    /* 메인콘텐츠1 */
+   
+
+    .mconf{
+        padding-top: 0px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .mconf{
+        text-align: center;
+    }
+    .mconf img:hover{
+        filter: none;
+    }
+    .box-wrap{
+        display: flex;
+    }
+    .oce, .ski{
+        position: static;
+        width: 50%;
+    }
+    .oce{
+        margin-right: 5%;
+    }
+    .mconf img{
+        width: 100%;
+    }
+    .ot p, .st p{
+        transform: rotate(0deg);
+        top: 500px;
+    }
+    .ot p{
+        left: 0;
+    }
+    .st p{
+        right: 0;
+    }
+    .ot span, .st span{
+        display: block;
+        top: 550px;
+        color: #333;
+        width: 48%;
+    }
+    .ot span{
+        left: 0;
+        text-align: left;
+    }
+    .st span{
+        right: 0;
+        text-align: right;
+    }
+
+
+    .tab_con{
+        width: 90%;
+        margin: 0 auto;
+        height: 600px;
+    }
+    .tab_con_wrap{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .con01 ul{
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+    .con01 ul li{
+        width: 40%;
+    }
+    .con01 > ul li:nth-child(3){
+        position: absolute;
+        right: 0; 
+        top: 0px;
+    }
+    .con01 > ul li:last-child{
+        position: absolute;
+        
+        top: 0;
+    }
+
+
+
+    .act01{transform: rotate(180deg) !important;}
+    /* 인기제품 */
+    .best_product article{
+        width: 100%;
+    }
+    .best_product article > h3{
+        font-size: 34px;
+      }
+    .best_product article ul{
+        display: block;
+    }
+    .best_product article{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .best_product article ul li{
+        width: 100%;
+    }
+    .best_product article ul li img{
+        width: 68%;
+    }
+
+    /* 이벤트 슬라이드 */
+    .event{
+        width: 95%;
+        position: relative;
+    }
+    .event i.fas{
+        background: none;
+        top: 40%;
+    }
+    .event > h2{
+        font-size: 34px;
+        text-align: center;
+        padding-bottom: 40px;
+      }
+    .e_slide{
+    }
+    .es_wrap{
+        width: 300%;
+    }
+    .es_wrap > div{
+        width: 100%;
+        margin-right: 1%;
+    }
+    .es_wrap > div > a{
+        display: block;
+    }
+    .event i.fa-angle-left{
+        left: 0px;
+        position: absolute;
+    }
+    .event i.fa-angle-right{
+        right: 0px;
+        position: absolute;
+    }
+    .es_wrap > div > a > img{
+        width: 100%;
+    }
+    .e_text{
+        padding: 20px 0px 0px 0px;
+    }
+
+
+    /* 푸터서식 */
+    .f_inner nav{
+        width: 80%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .f_inner nav dl{
+        width: 50%;
+    }
+    address{
+        display: block;
+        height: 110px;
+        text-align: center;
+    }
+    address h2{
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+    }
+    address p{
+        line-height: 50px;
+    }
+    address h2 img{
+        width: 140px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    .t_btn{
+        bottom: 3%;
+        right: 4%;
+      }
+
+
+
+}
