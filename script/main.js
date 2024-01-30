@@ -33,7 +33,6 @@ $(document).ready(function(){
     $('.gnb').mouseleave(function(){
       $('.sub').css('display', 'none');
     })
-    
 
     $('#toggle').click(function(){
       $('#toggle span:nth-child(2)').toggleClass('hide01');

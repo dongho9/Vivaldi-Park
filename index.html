@@ -7,7 +7,6 @@
   <!-- 초기화 -->
   <link href="./css/reset.css" rel="stylesheet" type="text/css">
   <!-- 공통서식 (글꼴, 크기, 색상, 링크)-->
-  <link href="./css/base.css" rel="stylesheet" type="text/css">
   <!-- pc화면 해상도일때 적용되는 서식 -->
   <link href="./css/pc.css" rel="stylesheet" type="text/css">
   <!-- tablet화면 해상도일때 적용되는 서식 -->
@@ -15,7 +14,7 @@
   <!-- mobile화면 해상도일때 적용되는 서식 -->
   <link href="./css/mobile.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
-
+  <link rel="stylesheet" href="./css/swiper.css" type="text/css">
   <!-- 아이콘폰트 주소 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -313,18 +312,19 @@
           </li>
         </ul>
     </section>
-
+ 
+    <section id="ran">
+      <h2>배너</h2>
+    </section>
    
     <!-- 인기제품 -->
     <article class="m_slide">
-      <h2>Healing & Convenience
-      </h2>
+      <h2>Healing & Convenience</h2>
       <div class="visual_slide">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="./images/mcon11.png" alt="인피니티풀">
             <p>Infinity Pool</p>
-            <p></p>
           </div>
           <div class="swiper-slide">
             <img src="./images/mcon12.png" alt="스피드">
@@ -332,8 +332,7 @@
           </div>
           <div class="swiper-slide">
             <img src="./images/mcon13.png" alt="개미">
-            <p>AntWorld
-            </p>
+            <p>AntWorld</p>
           </div>
           <div class="swiper-slide">
             <img src="./images/mcon14.png" alt="슈퍼">
@@ -351,6 +350,7 @@
       </div>
       <div class="swiper-pagination"></div>
     </article>
+
 
     <!-- 이벤트 1170*256 746*256 -->
     <section class="event">
@@ -388,9 +388,6 @@
       </article>
       <i class="fas fa-angle-left"></i>
       <i class="fas fa-angle-right"></i>
-    </section>
- <section id="ran">
-      <h2>배너</h2>
     </section>
 
   </main>
@@ -576,26 +573,27 @@
   <!-- 제이쿼리 라이브러리 -->
  
   <script>  
-    // 스와이퍼 슬라이드 스크립트
-    let visual_slide = new Swiper('.visual_slide', {
-      //옵션선택
-      slidesPerView: 1, 
-      spaceBetween: 20,
-      pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,  //브라우저가 768보다 클 때
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 3,  //브라우저가 1024보다 클 때
-          spaceBetween: 400,
-        },
-      }
-    });
+  // 스와이퍼 슬라이드 스크립트
+  let visual_slide = new Swiper('.visual_slide', {
+    // 옵션 선택
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 400,
+      },
+    }
+  });
     </script>
 
 </body>
