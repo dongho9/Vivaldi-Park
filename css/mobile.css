@@ -35,7 +35,7 @@
         }
         .gnb2{
             top: -10px;
-            left: 55%;
+            left: 68%;
         }
         .gnb2 > ul > li{
             margin-right: 5px;
@@ -171,80 +171,49 @@
         }
         /* 메인콘텐츠1 */
       
-    .mconf{
-        padding-top: 0px;
-        width: 90%;
-        margin: 0 auto;
-        height: 700px;
-    }
-    .mconf{
-        text-align: center;
-    }
-    .mconf img:hover{
-        filter: none;
-    }
-    .box-wrap{
-        display: flex;
-    }
-    .oce, .ski{
-        position: static;
-        width: 50%;
-    }
-    .oce{
-        margin-right: 5%;
-    }
-    .mconf img{
-        width: 100%;
-        height: 300px;
-    }
-    .ot p, .st p{
-        transform: rotate(0deg);
-        top: 400px;
-        font-size: 26px;
-    }
-    .ot p{
-        left: 0;
-    }
-    .st p{
-        right: 0;
-    }
-    .ot span, .st span{
-        display: block;
-        top: 450px;
-        color: #333;
-        width: 48%;
-    }
-    .ot span{
-        left: 0;
-        text-align: left;
-    }
-    .st span{
-        right: 0;
-        text-align: right;
-    }
-
-
+        .oce, .ski {
+            width: 100%;
+          }
+          .oce{
+            margin-bottom: 40px;
+          }
+          .mconf {
+            width: 90%;
+            margin: 0 auto;
+            }
+            .oce:hover, .ski:hover {
+                transform: none;
+              }
+              img:hover {
+                filter: none;
+              }
+    
+              
     .tab_con{
         width: 90%;
-        height: 490px;
+        height: 560px;
         margin-top: 100px;
-        margin-bottom: 100px;
     }
     .tab_con_wrap{
-        width: 100%;
+        width: 90%;
+        height: 560px;
         margin: 0 auto;
     }
     .con01, .con02{
         width: 100%;
     }
     .con01 ul, .con02 ul{
-        width: 90%;
+        width: 100%;
         flex-wrap: wrap;
     }
-    .con01 ul li, .con02 ul li{
-        width: 180px;
-        margin-bottom: 40px;
-        justify-content:space-between;
+
+    .con01 ul li, .con02 ul li { 
+        width: 230px; 
+        margin-bottom: 40px; 
+        justify-content:space-between; 
+    } 
+    .con01 p, .con02 p{
+        width: 100% !important;
     }
     .con01 ul > li:nth-child(2), .con02 ul > li:nth-child(2){
         margin-right: 0px;
@@ -253,10 +222,22 @@
         width: 100%;
       }
       .con01 img ,.con02 img{
-        width: 180px;
+        width: 230px;
       }
 
+      .visual_slide { width: 90%; margin: 0 auto; overflow: hidden; } 
 
+      .swiper-wrapper { display: flex; } 
+      
+      .swiper-slide { position: relative; width: 100%;} 
+      
+      .swiper-slide img { transition: 0.5s; display: block; width: 100%;} 
+      
+      .swiper-slide img:hover { filter: brightness(80%); } 
+      
+      .swiper-slide p { position: absolute; bottom: 30px; left: 20px; color: #fff; width: 100%; } 
+
+      
         .act{
             display: none;
         }
@@ -289,7 +270,7 @@
         }
         .event i.fas{
             background: none;
-            top: 40%;
+            top: 72% !important;
         }
         .event > h2{
             font-size: 34px;
@@ -319,7 +300,7 @@
             top: 350px;
         }
         .event i.fa-angle-left{
-            left: 80%;
+            left: 82%;
         }
         .event i.fa-angle-right{
             right: 0;
@@ -334,12 +315,15 @@
         }
     
     
-        #ran{
-            width: 100%;
-            margin: 0 auto;
-            height: 200px;
-            margin-bottom: 100px;
-        }
+        #rani { width: 90%; margin: 0 auto; display: block; margin-top: 100px; margin-bottom: 100px;} 
+        /* 슬라이드 */
+        #ran, #ran01, #ran02{
+          display: none;
+         }
+         #ran03{
+            display: block !important;
+         }
+
 
         /* 푸터서식 */
         .f_inner nav{
@@ -382,5 +366,42 @@
             bottom: 3%;
             right: 4%;
           }
+          .banner img { width: 350px; }
     }
-    
+
+    @media screen and (max-width : 700px){
+        .gnb2{
+            left: 65%;
+        }
+    }
+    @media screen and (max-width : 689px){
+        .gnb2{
+            left: 65%;
+        }
+    }
+    @media screen and (max-width :  600px){
+        .gnb2{
+            left: 55%;
+        }
+    }
+    @media screen and (max-width :  672px){
+        .event i.fas{
+            top: 340px !important;
+        }
+    }
+    @media screen and (max-width : 561px){
+        .con01 ul li, .con02 ul li { 
+            width: 210px; 
+        }
+        .con01 img ,.con02 img{
+            width: 210px;
+          } 
+    }
+    @media screen and (max-width : 561px){
+        .con01 ul li, .con02 ul li { 
+            width: 200px; 
+        }
+        .con01 img ,.con02 img{
+            width: 200px;
+          } 
+    }

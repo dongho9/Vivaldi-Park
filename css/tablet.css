@@ -5,7 +5,7 @@
  /* 모바일 내비게이션 서식 */
  header nav { position: fixed; top: 100px; width: 100%; height: 100%; z-index: 1001; } 
  .gnb { width: 100%; align-items: center; display: flex; flex-direction: column; display: none; left: 5%; top: 0px; padding-top: 80px; height: 370px; } 
- .gnb2 { top: -10px; left: 65%; } 
+ .gnb2 { top: -10px; left: 70%; } 
  .gnb > ul { width: 90%; display: block; } 
  .gnb > li { text-align: center; position: relative; } 
  .gnb li a { display: block; background-color: #fff; line-height: 280%; font-size: 18px !important; text-align: center; text-decoration: none; color: #333 !important; } 
@@ -34,29 +34,28 @@
  /* 메인콘텐츠1 */
  
 
- .mconf { padding-top: 0px; width: 90%; margin: 0 auto; height: 700px; } 
- .mconf { text-align: center; } 
- .mconf img:hover { filter: none; } 
- .box-wrap { display: flex; } 
- .oce, .ski { position: static; width: 50%; } 
- .oce { margin-right: 5%; } 
- .mconf img { width: 100%; } 
- .ot p, .st p { transform: rotate(0deg); top: 500px; } 
- .ot p { left: 0; } 
- .st p { right: 0; } 
- .ot span, .st span { display: block; top: 550px; color: #333; width: 48%; } 
- .ot span { left: 0; text-align: left; } 
- .st span { right: 0; text-align: right; } 
-
-
- .tab_con { width: 90%; height: 670px; margin-top: 100px; margin-bottom: 100px; } 
+ .oce, .ski {
+   max-width: 48%;
+ }
+ .mconf {
+   width: 90%;
+   margin: 0 auto;
+   }
+   .oce:hover, .ski:hover {
+      transform: none;
+    }
+    img:hover {
+      filter: none;
+    }
+    
+ .tab_con { width: 90%; height: 900px; margin-top: 100px; margin-bottom: 100px; } 
  .tab_con_wrap { width: 100%; margin: 0 auto; } 
  .con01, .con02 { width: 100%; } 
  .con01 ul, .con02 ul { width: 90%; flex-wrap: wrap; } 
- .con01 ul li, .con02 ul li { width: 320px; margin-bottom: 40px; justify-content:space-between; } 
+ .con01 ul li, .con02 ul li { width: 380px; margin-bottom: 40px; justify-content:space-between; } 
  .con01 ul > li:nth-child(2), .con02 ul > li:nth-child(2) { margin-right: 0px; } 
  .con02 ul > li div > p { width: 100%; } 
- .con01 img ,.con02 img { width: 320px; } 
+ .con01 img ,.con02 img { width: 380px; } 
  .act01 { transform: rotate(180deg) !important; } 
  /* 인기제품 */
  
@@ -67,13 +66,27 @@
  .best_product article ul li { width: 100%; } 
  .best_product article ul li img { width: 68%; } 
 
+ #rani { width: 90%; margin: 0 auto; display: flex; justify-content: space-between;} 
  /* 슬라이드 */
+ #ran, #ran01, #ran02{
+   width: 33.3%;
+  }
+  #rani img {
+   height: 150px;
+}
+#ran:hover img, #ran01:hover img, #ran02:hover img{
+   filter: none;
+  }
+#ran03{
+   display: none;
+  }
+ .visual_slide { width: 90%; margin: 0 auto; overflow: hidden; } 
 
 .swiper-wrapper { display: flex; } 
 
-.swiper-slide { position: relative; } 
+.swiper-slide { position: relative; width: 100%;} 
 
-.swiper-slide img { transition: 0.5s; display: block; } 
+.swiper-slide img { transition: 0.5s; display: block; width: 100%;} 
 
 .swiper-slide img:hover { filter: brightness(80%); } 
 
@@ -82,7 +95,7 @@
 
  /* 이벤트 슬라이드 */
  .event { width: 90% !important; position: relative; } 
- .event i.fas { background: none; top: 40%; } 
+ .event i.fas { background: none; top: 78% !important; } 
  .event > h2 { font-size: 34px; text-align: center; padding-bottom: 40px; } 
  .e_slide { width: 100%; } 
  .es_wrap { width: 300%; } 
@@ -107,4 +120,17 @@
  .sns dt { text-align: center; } 
  .sns dd { text-align: center; } 
  .t_btn { bottom: 3%; right: 4%; } 
+ }
+ .banner img { width: 450px; }
+
+ @media screen and (max-width : 894px){
+    .con01 ul li, .con02 ul li { width: 350px; margin-bottom: 40px; justify-content:space-between; } 
+    .con01 img ,.con02 img { width: 350px; } 
+    .gnb2{
+      left: 70%;
+    }
+ }
+ @media screen and (max-width : 828px){
+    .con01 ul li, .con02 ul li { width: 322px; margin-bottom: 40px; justify-content:space-between; } 
+    .con01 img ,.con02 img { width: 322px; } 
  }

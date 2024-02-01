@@ -15,6 +15,7 @@
   <link href="./css/mobile.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/common.css" type="text/css">
   <link rel="stylesheet" href="./css/swiper.css" type="text/css">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <!-- 아이콘폰트 주소 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -313,8 +314,20 @@
         </ul>
     </section>
  
-    <section id="ran">
+    <section id="rani">
       <h2>배너</h2>
+        <a href="#" title="랜덤" id="ran">
+
+        </a>
+        <a href="#" title="랜덤" id="ran01">
+          
+        </a>
+        <a href="#" title="랜덤" id="ran02">
+          
+        </a>
+        <a href="#" title="랜덤" id="ran03">
+          
+        </a>
     </section>
    
     <!-- 인기제품 -->
@@ -578,6 +591,7 @@
     // 옵션 선택
     slidesPerView: 1,
     spaceBetween: 10,
+    slidesPerGroup: 1,
     loop: false,
     pagination: {
       el: ".swiper-pagination",
@@ -586,11 +600,9 @@
     breakpoints: {
       768: {
         slidesPerView: 2,
-        spaceBetween: 0,
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 400,
       },
     }
   });

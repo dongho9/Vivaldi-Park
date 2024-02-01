@@ -1,9 +1,23 @@
 
 $(document).ready(function(){
-  let img = ['ran01', 'ran02', 'ran03']
+  let img = ['ran04', 'ran05', 'ran06']
   let num = Math.floor(Math.random()*3);
-  console.log(num);
-  document.getElementById('ran').innerHTML='<img src="./images/'+img[num]+'.jpg" alt="배너">';
+  document.getElementById('ran').innerHTML='<img src="./images/'+img[num]+'.png" alt="배너">';
+
+  let img2 = ['ran07', 'ran08', 'ran09']
+  let num2 = Math.floor(Math.random()*3);
+  document.getElementById('ran01').innerHTML='<img src="./images/'+img2[num2]+'.png" alt="배너">';
+
+  let img3 = ['ran10', 'ran11', 'ran12']
+  let num3 = Math.floor(Math.random()*3);
+  document.getElementById('ran02').innerHTML='<img src="./images/'+img3[num3]+'.png" alt="배너">';
+
+  let img4 = ['ran04', 'ran05', 'ran06','ran07', 'ran08', 'ran09','ran10', 'ran11', 'ran12']
+  let num4 = Math.floor(Math.random()*9);
+  document.getElementById('ran03').innerHTML='<img src="./images/'+img4[num4]+'.png" alt="배너">';
+
+
+
 
     // 1. 변수선언
     let gnb = $('header .gnb > ul > li > a');
